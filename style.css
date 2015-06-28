@@ -256,11 +256,12 @@ input[type="text"], textarea, select{
 
     color: #fff !important;
     background-color: #eea236 !important;
-    border: #eea236 1px solid !important;
+    border: #BA7E2A 1px solid !important;
 }
 
 .btn-cart:hover{
-    color: #BA7E2A !important;
+    background-color: #BA7E2A !important;
+    border: 1px solid #eea236;
 }
 
 
