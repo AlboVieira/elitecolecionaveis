@@ -149,7 +149,7 @@ var elite = {
     // centraliza as correções css
     correcaoCSS: function () {
         elite.aplicaBotaoPesquisa();
-
+        $j('#qty').removeClass('input-text');
         //adidiciona classe para botao adicionar carrinho
         $j('.btn-cart').removeClass('button');
 
