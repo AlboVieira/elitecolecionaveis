@@ -135,6 +135,7 @@ var elite = {
             $j('#tabs-3').html("<ul class='products-grid'>"+ultHtml+"</ul>");
 
 
+            $j('.products-grid').show();
         }
     },
 
@@ -179,5 +180,6 @@ var elite = {
 $j(document).ready(function(){
     elite.aplicarEventos();
     elite.tab();
+
 });
 
