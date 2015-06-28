@@ -177,7 +177,7 @@ var elite = {
 };
 
 $j(document).ready(function(){
-    elite.aplicarEventos();
     elite.tab();
+    elite.aplicarEventos();
 });
 
