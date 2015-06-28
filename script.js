@@ -155,6 +155,7 @@ var elite = {
         elite.menuUserTopo();
         elite.carrinho();
 
+        elite.abasPrincipal();
         //remove h3 acima da grid de produtos
         $j('.main .subtitle').remove();
 
@@ -176,8 +177,7 @@ var elite = {
 };
 
 $j(document).ready(function(){
-    elite.tab();
-    elite.abasPrincipal();
     elite.aplicarEventos();
+    elite.tab();
 });
 
