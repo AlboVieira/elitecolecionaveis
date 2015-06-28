@@ -33,7 +33,7 @@ tr th{
     padding: 8px !important;
 }
 
-input[type="text"] {
+input[type="text"] , .input-text{
     display: block;
     height: 34px;
     padding: 6px 12px;
