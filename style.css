@@ -260,7 +260,7 @@ input[type="text"], textarea, select{
 }
 
 .btn-cart:hover{
-    color: #BA7E2A ;
+    color: #BA7E2A !important;
 }
 
 
