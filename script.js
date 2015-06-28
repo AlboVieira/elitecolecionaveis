@@ -149,16 +149,15 @@ var elite = {
     // centraliza as correções css
     correcaoCSS: function () {
         elite.aplicaBotaoPesquisa();
-
         //adidiciona classe para botao adicionar carrinho
         $j('.btn-cart').removeClass('button');
 
         elite.menuUserTopo();
         elite.carrinho();
 
-      //  elite.abasPrincipal();
+        elite.abasPrincipal();
         //remove h3 acima da grid de produtos
-      //  $j('.main .subtitle').remove();
+        $j('.main .subtitle').remove();
 
         //retira info desncessaria sobre o produto
         $j('.product-pricing').remove();
@@ -179,6 +178,6 @@ var elite = {
 
 $j(document).ready(function(){
     elite.aplicarEventos();
-   // elite.tab();
+    elite.tab();
 });
 
