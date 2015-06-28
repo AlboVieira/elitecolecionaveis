@@ -134,7 +134,7 @@ var elite = {
 
             $j('#tabs-3').html("<ul class='products-grid'>"+ultHtml+"</ul>");
 
-
+            $j('.products-grid').show();
         }
     },
 
@@ -149,13 +149,14 @@ var elite = {
     // centraliza as correções css
     correcaoCSS: function () {
         elite.aplicaBotaoPesquisa();
+        elite.abasPrincipal();
+
         //adidiciona classe para botao adicionar carrinho
         $j('.btn-cart').removeClass('button');
 
         elite.menuUserTopo();
         elite.carrinho();
 
-        elite.abasPrincipal();
         //remove h3 acima da grid de produtos
         $j('.main .subtitle').remove();
 
@@ -177,6 +178,7 @@ var elite = {
 };
 
 $j(document).ready(function(){
+    $j('.products-grid').hide();
     elite.tab();
     elite.aplicarEventos();
 });
