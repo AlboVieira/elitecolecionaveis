@@ -153,11 +153,11 @@ var elite = {
         $j('.btn-cart').removeClass('button');
 
         elite.menuUserTopo();
-        elite.carrinho();
-
         elite.abasPrincipal();
         //remove h3 acima da grid de produtos
         $j('.main .subtitle').remove();
+
+        elite.carrinho();
 
         //retira info desncessaria sobre o produto
         $j('.product-pricing').remove();
