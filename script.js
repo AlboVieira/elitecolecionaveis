@@ -134,7 +134,7 @@ var elite = {
 
             $j('#tabs-3').html("<ul class='products-grid'>"+ultHtml+"</ul>");
 
-            $j('.products-grid').show();
+
         }
     },
 
@@ -149,8 +149,6 @@ var elite = {
     // centraliza as correções css
     correcaoCSS: function () {
         elite.aplicaBotaoPesquisa();
-        elite.abasPrincipal();
-
         //adidiciona classe para botao adicionar carrinho
         $j('.btn-cart').removeClass('button');
 
@@ -178,8 +176,8 @@ var elite = {
 };
 
 $j(document).ready(function(){
-    $j('.products-grid').hide();
     elite.tab();
+    elite.abasPrincipal();
     elite.aplicarEventos();
 });
 
