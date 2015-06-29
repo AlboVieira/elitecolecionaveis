@@ -152,6 +152,7 @@ var elite = {
         elite.aplicaBotaoPesquisa();
         //adidiciona classe para botao adicionar carrinho
         $j('.btn-cart').removeClass('button');
+        $j('.footer .links').addClass('col-sm-12');
 
         elite.menuUserTopo();
         elite.abasPrincipal();
