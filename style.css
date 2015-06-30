@@ -411,6 +411,6 @@ input[type="text"], textarea, select{
     font-size: 12px;
 }
 
-.col-sm-3.text-left ul{
+.col-sm-2.text-left ul{
     text-align: left;
 }
