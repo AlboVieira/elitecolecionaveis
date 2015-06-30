@@ -409,3 +409,7 @@ input[type="text"], textarea, select{
 .block-content label{
     font-size: 12px;
 }
+
+.col-sm-3.text-left ul{
+    text-align: left;
+}
