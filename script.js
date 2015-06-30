@@ -152,7 +152,10 @@ var elite = {
         elite.aplicaBotaoPesquisa();
         //adidiciona classe para botao adicionar carrinho
         $j('.btn-cart').removeClass('button');
+
         $j('.footer .links').addClass('col-sm-12');
+        $j('.form-subscribe-header').remove();
+        $j('.block-content label').$j('.block-content label').text('Fique por dentro das novidades de seus personagens favoritos:');
 
         elite.menuUserTopo();
         elite.abasPrincipal();
@@ -181,6 +184,5 @@ var elite = {
 $j(document).ready(function(){
     elite.aplicarEventos();
     elite.tab();
-
 });
 

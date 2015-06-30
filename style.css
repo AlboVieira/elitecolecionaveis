@@ -381,6 +381,10 @@ input[type="text"], textarea, select{
 
 
 /* footer */
+.footer{
+    border-top: 1px solid #ccc;
+    margin-top: 5%;
+}
 .footer ul li {
     display: block;
     margin-left: 10px;
