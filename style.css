@@ -403,10 +403,10 @@ input[type="text"], textarea, select{
     display: inline !important;
 }
 
-/*
+
 .block-content{
     background-color: #E0E0E0 !important;
-}*/
+}
 .block-content label{
     font-size: 12px;
 }
