@@ -389,9 +389,11 @@ input[type="text"], textarea, select{
     margin-left: 10px;
 }
 
+.inline-footer{
+    text-align: left !important;
+}
 .inline-footer li{
     display: inline !important;
-    text-align: left !important;
 }
 
 .footer-container{
