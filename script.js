@@ -161,7 +161,7 @@ var elite = {
 
         var footer = $j('.footer-container').remove();
         footer.remove();
-        $j('.page').append(footer);
+        $j('.wrapper').append(footer);
 
 
         elite.menuUserTopo();
