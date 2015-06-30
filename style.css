@@ -397,3 +397,7 @@ input[type="text"], textarea, select{
 .footer-container .links.col-sm-12 li{
     display: inline !important;
 }
+
+.block-content label{
+    font-size: 12px;
+}
