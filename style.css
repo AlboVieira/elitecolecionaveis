@@ -377,3 +377,10 @@ input[type="text"], textarea, select{
     border-radius: 15px;
     color: rgb(174, 170, 162);
 }
+
+
+
+/* footer */
+.inline-footer li{
+    display: inline !important;
+}
