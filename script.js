@@ -156,6 +156,7 @@ var elite = {
         $j('.footer .links').addClass('col-sm-12');
         $j('.form-subscribe-header').remove();
         $j('.block-content label').text('Fique por dentro das novidades de seus personagens favoritos:');
+        $j('block-title').remove();
 
         elite.menuUserTopo();
         elite.abasPrincipal();
