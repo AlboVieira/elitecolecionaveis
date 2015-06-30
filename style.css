@@ -389,3 +389,7 @@ input[type="text"], textarea, select{
 .inline-footer li{
     display: inline !important;
 }
+
+.footer-container .links.col-sm-12 li{
+    display: inline !important;
+}
