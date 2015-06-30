@@ -396,6 +396,7 @@ input[type="text"], textarea, select{
 
 .footer-container{
     background-color: #E0E0E0;
+    height: 250px;
 }
 
 .footer-container .links.col-sm-12 li{
@@ -403,7 +404,7 @@ input[type="text"], textarea, select{
 }
 
 .block-content{
-    background-color: #E0E0E0;
+    background-color: #E0E0E0 !important;
 }
 .block-content label{
     font-size: 12px;
