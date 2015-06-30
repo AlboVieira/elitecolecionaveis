@@ -116,13 +116,14 @@ var elite = {
         //remove os itens na pagina principal para colocar nas tabs
         if(todosProdutos.find('.toolbar').length == TEM_REGISTRO){
 
-            todosProdutos.remove();
-            $j('#tabs-1').html("<div>" +todosProdutos.html() + "</div>");
-
             //aplica à aba lançamento
             var novosProdutos = $j('.products-grid').eq(0);
             novosProdutos.remove();
             $j('#tabs-2').html("<ul class='products-grid novo'>"+novosProdutos.html()+"</ul>");
+
+
+            todosProdutos.remove();
+            $j('#tabs-1').html("<div>" +todosProdutos.html() + "</div>");
 
             //aplica a aba ultimas visualizações os itens
             var ultVisualizacoes = $j('.products-grid').eq($j('div .products-grid').length - 1);
@@ -142,7 +143,7 @@ var elite = {
     tab: function () {
         if($j( "#tabs").length > TEM_REGISTRO){
             $j( "#tabs" ).tabs({
-                collapsible: true
+                collapsible: false
             });
         }
     },
