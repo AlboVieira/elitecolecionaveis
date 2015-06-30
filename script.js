@@ -159,9 +159,9 @@ var elite = {
         $j('.block-content label').text('Fique por dentro das novidades de seus personagens favoritos:');
         $j('.block-title').remove();
 
-        var footer = $j('.footer-container').remove();
-        footer.remove();
-        $j('.wrapper').append(footer);
+        //var footer = $j('.footer-container').remove();
+        //footer.remove();
+        //$j('.wrapper').append(footer);
 
 
         elite.menuUserTopo();
