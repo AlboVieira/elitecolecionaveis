@@ -13,6 +13,43 @@ h1,h2,h3,h4{
     font-family: "Oswald", sans-serif !important;
 }
 
+.header-container{
+    height: 170px;
+}
+
+.header-container img{
+    width:  190px;
+}
+.header-container img:hover{
+    opacity: 0.8;
+    transition: 1s;
+}
+
+.carrinho-icon{
+    /* <img src="https://elitecolec.lojablindada.com/media/./icons/meucarrinho.png" alt="" />*/
+    background-image: url("https://elitecolec.lojablindada.com/media/./icons/cart.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 50px;
+    background-size: 40px;
+}
+.icon-top{
+    color: #A56401;
+}
+
+/* <img src="" alt="" /> */
+.fale-conosco-icon{
+    background-image: url("https://elitecolec.lojablindada.com/media/./icons/contact-us.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 50px;
+    background-size: 40px;
+}
+
+.header .links{
+    margin-top: 48px;
+}
+
 tr th{
     color: #fff;
     background: #ffa84c; /* Old browsers */
@@ -26,6 +63,7 @@ tr th{
 }
 
 
+
 /* */
 .form-search input[type="text"]{
     display: inline !important;
@@ -33,10 +71,26 @@ tr th{
     padding: 8px !important;
 }
 
-input[type="text"], textarea, select{
+input[type="text"], textarea{
     display: block;
     height: 34px;
     padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+select{
+    display: block;
     font-size: 14px;
     line-height: 1.42857143;
     color: #555;
@@ -55,23 +109,7 @@ input[type="text"], textarea, select{
 
 /* menu */
 .nav-container {
-    width: 100% !important;
-    border-top: solid 1px #ddd !important;
-    border-bottom: solid 1px #ddd !important;
-    margin: 55px 0px 18px 0px !important;
-    color: #fff !important;
-    box-shadow: 1px 1px 13px #ccc !important;
-    border-radius: 4px !important;
-
-    background: #ffa84c; /* Old browsers */
-    background: -moz-linear-gradient(top,  #ffa84c 0%, #aa5f0a 99%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa84c), color-stop(99%,#aa5f0a)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #ffa84c 0%,#aa5f0a 99%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #ffa84c 0%,#aa5f0a 99%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #ffa84c 0%,#aa5f0a 99%); /* IE10+ */
-    background: linear-gradient(to bottom,  #ffa84c 0%,#aa5f0a 99%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#aa5f0a',GradientType=0 ); /* IE6-9 */
-
+    display: none;
 }
 .level10.nav-0.level-top.first.parent{
     margin-left: 10px;
@@ -94,10 +132,6 @@ input[type="text"], textarea, select{
     border-bottom: dashed 1px #ccc;
 }
 
-.col-left.sidebar{
-    box-shadow: 0px 0px 3px rgb(140, 109, 52);
-}
-
 
 .menu-lateral a{
     color: #000 !important;
@@ -106,6 +140,7 @@ input[type="text"], textarea, select{
 
 .menu-lateral a:hover{
     color: #C58D00  !important;
+    text-decoration: underline;
 }
 
 .menu-lateral.pai a{
@@ -117,15 +152,17 @@ input[type="text"], textarea, select{
     display: block;
     padding: 10px 3px;
     font-size: 14px;
+    text-decoration: none;
 }
 .menu-lateral-sub a{
     color: #000 !important;
-    text-decoration: none;
     margin-left: 10px;
 }
 
 .menu-lateral-sub a:hover{
     color: #C58D00  !important;
+    text-decoration: underline;
+
 }
 
 
@@ -215,21 +252,55 @@ input[type="text"], textarea, select{
 
 /*menu user*/
 .quick-access .links{
-    display: none !important;
+    display: none ;
 }
 .container-menu-top{
-    background-color: #000;
+    background-color: #A56401;
+    text-align: center !important;
+    min-height: 32px;
+    line-height: 24px;
 }
 .container-menu-top ul{
     display: inline-flex;
+    margin-bottom: 0 !important;
+    margin-right: 80px;
 }
 .container-menu-top ul li{
-    padding-left: 35px;
+    padding-left: 20px;
     padding-top: 5px;
+
+    color: #fff !important;
+    font-size: 11px;
 }
+
 .container-menu-top ul li a{
-    color: #fff;
+    color: #fff !important;
+    font-size: 11px;
 }
+
+#menu-telefone{
+    background: url(https://elitecolec.lojablindada.com/media/./icons/telefone2.png) no-repeat 0% 70%;
+    background-size: 16px;
+}
+#menu-email{
+    background: url(https://elitecolec.lojablindada.com/media/./icons/mail.png) no-repeat 0% 70%;
+    background-size: 16px;
+    margin-left: 15px;
+}
+
+
+/*//
+            //*/
+.redes-youtube{
+    background: url(https://elitecolec.lojablindada.com/media/./icons/youtube.png) no-repeat 0% 50%;
+    padding-left: 30px!important;
+}
+.redes-face{
+    background: url(https://elitecolec.lojablindada.com/media/./icons/facebook.png) no-repeat 0% 50%;
+    margin-left: 15px;
+    padding-left: 30px!important;
+}
+
 
 
 /*botao comprar*/
@@ -310,8 +381,23 @@ input[type="text"], textarea, select{
     font-family: Oswald;
 }
 
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited{
+    color: #818181;
+}
+.ui-tabs-active.ui-state-active a{
     color: #fff !important;
+}
+
+/*
+.ui-state-default.ui-corner-top a:hover {
+    color: #fff !important;
+    background-color: rgb(111, 110, 109) !important;
+
+}
+*/
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active{
     background: #ffa84c; /* Old browsers */
     background: -moz-linear-gradient(top,  #ffa84c 0%, #aa5f0a 99%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa84c), color-stop(99%,#aa5f0a)); /* Chrome,Safari4+ */
@@ -321,17 +407,7 @@ input[type="text"], textarea, select{
     background: linear-gradient(to bottom,  #ffa84c 0%,#aa5f0a 99%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#aa5f0a',GradientType=0 ); /* IE6-9 */
 
-}
-
-.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited{
-    color: #E7E7E7;
-}
-.ui-tabs-active.ui-state-active a{
-    color: #000;
-}
-
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
-    background: #fff !important;
+    border-top: 2px solid rgb(58, 59, 61);
 }
 
 
@@ -357,8 +433,9 @@ input[type="text"], textarea, select{
     border-bottom: 1px solid #BA9841;
     margin-bottom: 10px;
 }
-.limiter{
+.pager .limiter{
     float: left !important;
+    text-align: left;
 }
 
 .pager.col-sm-8{
@@ -397,7 +474,7 @@ input[type="text"], textarea, select{
 }
 
 .footer-container{
-    background-color: #E0E0E0;
+    background-color: #FDFCFC;
     height: auto;
 }
 
@@ -405,14 +482,62 @@ input[type="text"], textarea, select{
     display: inline !important;
 }
 
+.links.col-sm-12{
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+}
 
-.block-content{
-    background-color: #E0E0E0 !important;
+.footer-container .block-content{
+    background-color: #FDFCFC; !important;
 }
 .block-content label{
     font-size: 12px;
 }
 
-.col-sm-4.text-left ul{
+.col-sm-3.text-left ul{
     text-align: left;
+}
+
+
+
+/** button span geral
+.button:first-child{
+    height: auto !important;
+    display: inline-block !important;
+    padding: 1px 8px !important;
+    margin-bottom: 0 !important;
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 1.42857143 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    touch-action: manipulation !important;
+    cursor: pointer !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none;
+    user-select: none !important;
+    background-image: none !important;
+    border-radius: 4px !important;
+
+    color: #fff !important;
+    background-color: #eea236 !important;
+    border: #BA7E2A 1px solid !important;
+}
+**/
+
+.button span{
+    background: #9B7525 !important;
+    color: #fff !important;
+}
+
+.button span span {
+    background: #9B7525 !important;
+}
+
+
+/* Cabecalho page */
+.page-head h2{
+    border-bottom: 1px solid #9B7525;
 }

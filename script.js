@@ -21,13 +21,14 @@ var elite = {
     // aplica a opcao inicio ao menu
     corrigeMenuTop: function () {
         $j('#nav li:first-child').removeClass('first parent');
-        $j('#nav').prepend('<li class="level10 nav-0 level-top first parent"><a href="/">Inicio</a></li>');
+        $j('#nav').prepend('<li class="level10 nav-0 level-top first parent"><a href="/"> Inicio</a></li>');
     },
 
     // cria o menu lateral
     criaMenuLateral: function(){
 
         var cloneTopMenu  = $j('#nav li');
+        $j('#nav').remove();
         var html = "<h4 class='title-categorias'>Categorias</h4>";
 
         html += "<ul>";
@@ -46,7 +47,9 @@ var elite = {
 
         });
         html += '</ul>';
-        $j('.sidebar').html(html);
+
+        $j('.sidebar').css('box-shadow','0px 0px 3px rgb(140, 109, 52)');
+        $j('.sidebar').append(html);
     },
 
     // carrega o submeno conforme passar do mouse na categoria principal
@@ -86,9 +89,39 @@ var elite = {
 
     //plota o menu no topo
     menuUserTopo: function () {
+        $j('ul .top-link-checkout').parents('li').remove();
+        var htmlDados =
+
+            //https://elitecolec.lojablindada.com/media/./icons/facebook.png
+            //https://elitecolec.lojablindada.com/media/./icons/youtube.png
+
+            '<li id="menu-telefone"> (31)3333-3333</li>' +
+            '<li id="menu-email"> elitecolecionaveis@elite.com.br</li>' +
+            '<li class="redes-face"><a href="#"></a></li>' +
+            '<li class="redes-youtube"><a href="#"></a></li>';
+
         //coloca menu do header  no topo
         var listaOpcoesUser = $j('.quick-access .links');
-        $j('.wrapper').prepend("<div class='container-menu-top'><ul>"+ listaOpcoesUser.html() +"</div></ul>");
+        $j('.wrapper').prepend("<div class='container-menu-top'><ul>"+ listaOpcoesUser.html() +"</ul><ul style='margin-left: 10px'>"+ htmlDados +"</ul></div>");
+
+
+        //remove as primeiras opcoes
+        $j('.quick-access .links li').eq(0).remove();
+        $j('.quick-access .links li').eq(0).remove();
+
+
+        //<img src="https://elitecolec.lojablindada.com/media/./icons/cart.png" alt="" />
+        //$j('.quick-access .links li a').eq(0).prepend("<span class='carrinho-icon'></span>");
+        $j('.quick-access .links li a').eq(0).addClass('icon-top carrinho-icon');
+
+        //retira link de login dos botoes
+        $j('.quick-access .links li').eq(1).remove();
+
+
+        $j('.quick-access .links').append('<li id="fale-conosco"><a class="icon-top fale-conosco-icon" href="http://elitecolecionaveis.com.br/contacts/">Fale Conosco</a></li>');
+
+
+        $j('.quick-access .links').css('display', 'block');
     },
 
     //correções css na tela de carrinho(checkout)
