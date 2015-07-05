@@ -125,6 +125,13 @@ select{
 }
 
 /* Sidebar */
+.inicio{
+    background-image: url('https://elitecolec.lojablindada.com/media/./icons/home.png');
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    padding-top: 2px;;
+}
+
 .menu-lateral{
     display: block;
     padding: 10px 3px;
@@ -574,3 +581,14 @@ select{
     background: url(https://elitecolec.lojablindada.com/media/./icons/icone-fechar.gif) no-repeat !important;
     background-size: 10px !important;
 }
+
+/* Acerta css de labels de produto configuravel */
+#product-options-wrapper label.required{
+    text-transform: uppercase;
+}
+
+#shopping-cart-totals-table td.a-left{
+    border-bottom: 1px solid #ccc;
+}
+
+

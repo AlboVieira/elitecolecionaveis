@@ -21,7 +21,7 @@ var elite = {
     // aplica a opcao inicio ao menu
     corrigeMenuTop: function () {
         $j('#nav li:first-child').removeClass('first parent');
-        $j('#nav').prepend('<li class="level10 nav-0 level-top first parent"><a href="/"> Inicio</a></li>');
+        $j('#nav').prepend('<li class="level10 nav-0 level-top first parent inicio"><a href="/"> Inicio</a></li>');
     },
 
     // cria o menu lateral
@@ -42,7 +42,11 @@ var elite = {
                 html += "<li class='menu-lateral-sub '><a href='" + conteudoLink.attr('href') + "' >" +  conteudoLink.text() + "</a></li>";
             }
             else{
-                html += "<li class='menu-lateral pai'><a href='" + conteudoLink.attr('href') + "' >" +  conteudoLink.text() + "</a></li>";
+                var inicio = '';
+                if(conteudoLink.text() == ' Inicio'){
+                    inicio = 'inicio';
+                }
+                html += "<li class='menu-lateral pai'><a class='"+inicio + "' href='" + conteudoLink.attr('href') + "' >" +  conteudoLink.text() + "</a></li>";
             }
 
         });
@@ -133,6 +137,8 @@ var elite = {
             var totals = $j('.cart-collaterals').find('.totals');
             totals.remove();
             widgetsShopp.append("<div class='col-sm-4'>"+ totals.html() +"</div>");
+
+            $j('#shopping-cart-totals-table td').removeClass('a-right').addClass('a-left');
         }
     },
 
