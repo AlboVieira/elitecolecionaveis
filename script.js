@@ -204,6 +204,7 @@ var elite = {
         $j('.block-content label').text('Fique por dentro das novidades de seus personagens favoritos:');
         $j('.block-title').remove();
 
+        $j('block.block-tags').remove();
         //var footer = $j('.footer-container').remove();
         //footer.remove();
         //$j('.wrapper').append(footer);
@@ -229,6 +230,7 @@ var elite = {
 
         //acrescenta classe bootstrap para alinhar itens do filro de pesquisa(pagina da categoria)
         $j('.pager').addClass('col-sm-8');
+
     }
 
 };

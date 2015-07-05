@@ -499,6 +499,11 @@ select{
 }
 
 
+.block.block-tags{
+  display: none;
+}
+
+
 
 /** button span geral
 .button:first-child{
