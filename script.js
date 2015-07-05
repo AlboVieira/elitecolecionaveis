@@ -97,8 +97,8 @@ var elite = {
 
             '<li id="menu-telefone"> (31)3333-3333</li>' +
             '<li id="menu-email"> elitecolecionaveis@elite.com.br</li>' +
-            '<li class="redes-face"><a href="#"></a></li>' +
-            '<li class="redes-youtube"><a href="#"></a></li>';
+            '<a class="redes-face" href="#"></a>' +
+            '<a class="redes-youtube" href="#"></a>';
 
         //coloca menu do header  no topo
         var listaOpcoesUser = $j('.quick-access .links');
@@ -149,10 +149,22 @@ var elite = {
         //remove os itens na pagina principal para colocar nas tabs
         if(todosProdutos.find('.toolbar').length == TEM_REGISTRO){
 
+            //pegar siblings
             //aplica à aba lançamento
-            var novosProdutos = $j('.products-grid').eq(0);
+            //$j('.col-main').children('ul')
+            var novosProdutos = $j('.col-main').children('ul');
+           // var novosProdutos2 = $j('.products-grid').eq(1);
             novosProdutos.remove();
-            $j('#tabs-2').html("<ul class='products-grid novo'>"+novosProdutos.html()+"</ul>");
+            //novosProdutos2.remove();
+
+            novos = "<ul class='products-grid novo'>"+novosProdutos.html()+"</ul>";
+            //novos += "<ul class='products-grid novo'>"+novosProdutos2.html()+"</ul>";
+
+            $j('#tabs-2').html(novos);
+
+            /*for(i=0;i<novosProdutos.length;i++){
+             $j('#tabs-2').html("<ul class='products-grid novo'>"+novosProdutos.eq(i).html()+"</ul>");
+             }*/
 
 
             todosProdutos.remove();

@@ -541,3 +541,8 @@ select{
 .page-head h2{
     border-bottom: 1px solid #9B7525;
 }
+
+
+.block-content{
+    background: #fff !important;
+}
