@@ -29,7 +29,7 @@ var elite = {
 
         var cloneTopMenu  = $j('#nav li');
         $j('#nav').remove();
-        var html = "<h4 class='title-categorias'>Categorias</h4>";
+        var html = "<h4 class='title-categorias'>Menu</h4>";
 
         html += "<ul>";
         var ulSub= "<ul>";
