@@ -155,18 +155,10 @@ var elite = {
             var novosProdutos = $j('.col-main').children('ul');
            // var novosProdutos2 = $j('.products-grid').eq(1);
             novosProdutos.remove();
-            //novosProdutos2.remove();
 
-            novos = "<ul class='products-grid novo'>"+novosProdutos.html()+"</ul>";
-            //novos += "<ul class='products-grid novo'>"+novosProdutos2.html()+"</ul>";
+            var novos = "<ul class='products-grid novo'>"+novosProdutos.html()+"</ul>";
 
             $j('#tabs-2').html(novos);
-
-            /*for(i=0;i<novosProdutos.length;i++){
-             $j('#tabs-2').html("<ul class='products-grid novo'>"+novosProdutos.eq(i).html()+"</ul>");
-             }*/
-
-
             todosProdutos.remove();
             $j('#tabs-1').html("<div>" +todosProdutos.html() + "</div>");
 
@@ -211,9 +203,9 @@ var elite = {
 
 
         elite.menuUserTopo();
-        elite.abasPrincipal();
+        //elite.abasPrincipal();
         //remove h3 acima da grid de produtos
-        $j('.main .subtitle').remove();
+        //$j('.main .subtitle').remove();
 
         elite.carrinho();
 
