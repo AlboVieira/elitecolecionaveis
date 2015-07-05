@@ -48,8 +48,8 @@ var elite = {
         });
         html += '</ul>';
 
-        $j('.sidebar').css('box-shadow','0px 0px 3px rgb(140, 109, 52)');
-        $j('.sidebar').append(html);
+        $j('.col-left.sidebar').css('box-shadow','0px 0px 3px rgb(140, 109, 52)');
+        $j('.col-left.sidebar').append(html);
     },
 
     // carrega o submeno conforme passar do mouse na categoria principal
