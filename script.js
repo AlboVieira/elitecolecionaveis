@@ -59,22 +59,23 @@ var elite = {
 
     //carrega o slider slickjs
     slider: function () {
-
-        var slider = $j('.slider-vitrine')
-            .on('init', function(slick) {
-               // console.log('fired!');
-                $j('.slider-vitrine').fadeIn(3000);
-            })
-            .slick({
-                dots: true,
-                infinite:true,
-                fade: true,
-                focusOnSelect: true,
-                lazyLoad: 'ondemand',
-                speed: 300,
-                autoplay: true,
-                autoplaySpeed: 2000
-            });
+        if($j('.slider-vitrine').length){
+            var slider = $j('.slider-vitrine')
+                .on('init', function(slick) {
+                   // console.log('fired!');
+                    $j('.slider-vitrine').fadeIn(3000);
+                })
+                .slick({
+                    dots: true,
+                    infinite:true,
+                    fade: true,
+                    focusOnSelect: true,
+                    lazyLoad: 'ondemand',
+                    speed: 300,
+                    autoplay: true,
+                    autoplaySpeed: 2000
+                });
+            }
     },
 
     // aplica conf e estilo ao form pesquisar
@@ -91,10 +92,6 @@ var elite = {
     menuUserTopo: function () {
         $j('ul .top-link-checkout').parents('li').remove();
         var htmlDados =
-
-            //https://elitecolec.lojablindada.com/media/./icons/facebook.png
-            //https://elitecolec.lojablindada.com/media/./icons/youtube.png
-
             '<li id="menu-telefone"> (31)3333-3333</li>' +
             '<li id="menu-email"> elitecolecionaveis@elite.com.br</li>' +
             '<a class="redes-face" href="#"></a>' +
@@ -109,18 +106,15 @@ var elite = {
         $j('.quick-access .links li').eq(0).remove();
         $j('.quick-access .links li').eq(0).remove();
 
-
-        //<img src="https://elitecolec.lojablindada.com/media/./icons/cart.png" alt="" />
-        //$j('.quick-access .links li a').eq(0).prepend("<span class='carrinho-icon'></span>");
+        //arruma icone carrinho
         $j('.quick-access .links li a').eq(0).addClass('icon-top carrinho-icon');
-
         //retira link de login dos botoes
         $j('.quick-access .links li').eq(1).remove();
 
-
+        //arruma icone fale conosco
         $j('.quick-access .links').append('<li id="fale-conosco"><a class="icon-top fale-conosco-icon" href="http://elitecolecionaveis.com.br/contacts/">Fale Conosco</a></li>');
 
-
+        //exibe os icones
         $j('.quick-access .links').css('display', 'block');
     },
 
@@ -147,30 +141,27 @@ var elite = {
         //realoca os produtos nas abas
         var todosProdutos = $j('.category-products');
         //remove os itens na pagina principal para colocar nas tabs
-        if(todosProdutos.find('.toolbar').length == TEM_REGISTRO){
+        if(todosProdutos.find('.toolbar').length == TEM_REGISTRO) {
 
-            //pegar siblings
             //aplica à aba lançamento
-            //$j('.col-main').children('ul')
-            var novosProdutos = $j('.col-main').children('ul');
-           // var novosProdutos2 = $j('.products-grid').eq(1);
+            var novosProdutos = $j('.std').prevAll('.products-grid');
             novosProdutos.remove();
 
-            var novos = "<ul class='products-grid novo'>"+novosProdutos.html()+"</ul>";
-
+            if (novosProdutos.length > 0){
+                var novos = '';
+                // for decremental pois com o prev, ele monta as listas ao contrario
+                for (var i = novosProdutos.length-1; i >= 0; i--) {
+                    novos += "<ul class='products-grid novo'>" + novosProdutos.eq(i).html() + "</ul>";
+                }
+            }
             $j('#tabs-2').html(novos);
             todosProdutos.remove();
             $j('#tabs-1').html("<div>" +todosProdutos.html() + "</div>");
 
             //aplica a aba ultimas visualizações os itens
-            var ultVisualizacoes = $j('.products-grid').eq($j('div .products-grid').length - 1);
-            ultHtml = "";
-            if(!ultVisualizacoes.hasClass('novo')){
-                ultVisualizacoes.remove();
-                ultHtml = ultVisualizacoes.html();
-            }
-
-            $j('#tabs-3').html("<ul class='products-grid'>"+ultHtml+"</ul>");
+            var ultVisualizacoes = $j('.std').nextAll('.products-grid');
+            ultVisualizacoes.remove();
+            $j('#tabs-3').html("<ul class='products-grid'>"+ultVisualizacoes.html()+"</ul>");
 
 
             $j('.products-grid').show();
@@ -194,18 +185,16 @@ var elite = {
         $j('.footer .links').addClass('col-sm-12');
         $j('.form-subscribe-header').remove();
         $j('.block-content label').text('Fique por dentro das novidades de seus personagens favoritos:');
-        $j('.block-title').remove();
+
+        //altera label do icone subscribe
+        $j('#newsletter-validate-detail').find('span').children().text('Assinar');
 
         $j('block.block-tags').remove();
-        //var footer = $j('.footer-container').remove();
-        //footer.remove();
-        //$j('.wrapper').append(footer);
-
 
         elite.menuUserTopo();
-        //elite.abasPrincipal();
+        elite.abasPrincipal();
         //remove h3 acima da grid de produtos
-        //$j('.main .subtitle').remove();
+        $j('.main .subtitle').remove();
 
         elite.carrinho();
 

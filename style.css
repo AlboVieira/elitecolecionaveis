@@ -503,7 +503,9 @@ select{
   display: none;
 }
 
-
+.block.block-subscribe .block-title{
+    display: none;
+}
 
 /** button span geral
 .button:first-child{
@@ -550,4 +552,25 @@ select{
 
 .block-content{
     background: #fff !important;
+}
+.block-title{
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000;
+    padding: 10px;
+    border-radius: 3px;
+    background: #ffa84c !important; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffa84c 0%, #aa5f0a 99%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffa84c), color-stop(99%,#aa5f0a)) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffa84c 0%,#aa5f0a 99%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffa84c 0%,#aa5f0a 99%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffa84c 0%,#aa5f0a 99%) !important; /* IE10+ */
+    background: linear-gradient(to bottom,  #ffa84c 0%,#aa5f0a 99%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffa84c', endColorstr='#aa5f0a',GradientType=0 ) !important; /* IE6-9 */
+}
+
+/** btnfechar  <img src="https://elitecolec.lojablindada.com/media/./icons/icone-fechar.gif" alt="" />*/
+.btn-remove{
+    background: url(https://elitecolec.lojablindada.com/media/./icons/icone-fechar.gif) no-repeat !important;
+    background-size: 10px !important;
 }
