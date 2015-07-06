@@ -592,7 +592,7 @@ select{
 }
 
 
-.fieldset.legend{
+.fieldset .legend{
     font-size: 15px !important;
     background: #FFFFFF !important;
 }
