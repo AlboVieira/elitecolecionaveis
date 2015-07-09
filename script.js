@@ -9,7 +9,7 @@ var elite = {
         elite.corrigeMenuTop();
         elite.criaMenuLateral();
         elite.slider();
-
+        elite.show('.pai');
     },
 
     // remove blocos desnecessarios
@@ -24,34 +24,47 @@ var elite = {
         $j('#nav').prepend('<li class="level10 nav-0 level-top first parent inicio"><a href="/"> Inicio</a></li>');
     },
 
+    show: function (elemento) {
+        //menu-lateral pai
+        $j('li.level-top').each(function( index, element ) {
+
+            var el = $j(element);
+
+            if(el.children('ul').length >0){
+                el.prepend("<i class='glyphicon glyphicon-menu-right' style='font-size: 10px'></i>");
+            }
+
+
+            el.click(function () {
+
+                if(!el.hasClass('down')){
+                    el.children('i').removeClass('glyphicon glyphicon-menu-right');
+                    el.children('i').addClass('glyphicon glyphicon-menu-down');
+                    el.find('ul').slideDown();
+                    el.addClass('down');
+                }else{
+                    el.children('i').removeClass('glyphicon glyphicon-menu-down');
+                    el.children('i').addClass('glyphicon glyphicon-menu-right');
+                    el.find('ul').slideUp();
+                    el.removeClass('down');
+                }
+            });
+        });
+
+    },
+
     // cria o menu lateral
     criaMenuLateral: function(){
 
-        var cloneTopMenu  = $j('#nav li');
-        $j('#nav').remove();
+        var cloneTopMenu  = $j('#nav');
+        //$j('#nav').remove();
         var html = "<h4 class='title-categorias'>Menu</h4>";
 
         html += "<ul>";
-        var ulSub= "<ul>";
 
-        cloneTopMenu.each(function (index, element) {
+        html += cloneTopMenu.html();
 
-           var conteudoLink = $j(element).children().first();
-
-            if($j(element).hasClass('level1')) {
-                html += "<li class='menu-lateral-sub '><a href='" + conteudoLink.attr('href') + "' >" +  conteudoLink.text() + "</a></li>";
-            }
-            else{
-                var inicio = '';
-                if(conteudoLink.text() == ' Inicio'){
-                    inicio = 'inicio';
-                }
-                html += "<li class='menu-lateral pai'><a class='"+inicio + "' href='" + conteudoLink.attr('href') + "' >" +  conteudoLink.text() + "</a></li>";
-            }
-
-        });
         html += '</ul>';
-
         $j('.col-left.sidebar').css('box-shadow','0px 0px 3px rgb(140, 109, 52)');
         $j('.col-left.sidebar').append(html);
     },
@@ -67,7 +80,7 @@ var elite = {
             var slider = $j('.slider-vitrine')
                 .on('init', function(slick) {
                    // console.log('fired!');
-                    $j('.slider-vitrine').fadeIn(3000);
+                    //$j('.slider-vitrine').fadeIn(3000);
                 })
                 .slick({
                     dots: true,
@@ -96,10 +109,10 @@ var elite = {
     menuUserTopo: function () {
         $j('ul .top-link-checkout').parents('li').remove();
         var htmlDados =
-            '<li id="menu-telefone"> (31)3333-3333</li>' +
-            '<li id="menu-email"> elitecolecionaveis@elite.com.br</li>' +
-            '<a class="redes-face" href="#"></a>' +
-            '<a class="redes-youtube" href="#"></a>';
+            '<li id="menu-telefone" class="ocultar"> (31)3333-3333</li>' +
+            '<li id="menu-email"> contato@elitecolecionaveis.com.br</li>' +
+            '<a class="redes-face" target="_blank" href="https://www.facebook.com/elitecolecionaveis"></a>' +
+            '<a class="redes-youtube" target="_blank" href="https://www.youtube.com/channel/UCwMICbqIXbmXbVu5SskpIrQ/"></a>';
 
         //coloca menu do header  no topo
         var listaOpcoesUser = $j('.quick-access .links');
@@ -166,9 +179,10 @@ var elite = {
 
             //aplica a aba ultimas visualizações os itens
             var ultVisualizacoes = $j('.std').nextAll('.products-grid');
-            ultVisualizacoes.remove();
-            $j('#tabs-3').html("<ul class='products-grid'>"+ultVisualizacoes.html()+"</ul>");
-
+            if(ultVisualizacoes.length > 0){
+                ultVisualizacoes.remove();
+                $j('#tabs-3').html("<ul class='products-grid'>"+ultVisualizacoes.html()+"</ul>");
+            }
 
             $j('.products-grid').show();
         }
@@ -219,11 +233,12 @@ var elite = {
         $j('.pager').addClass('col-sm-8');
 
     }
-
 };
 
 $j(document).ready(function(){
     elite.aplicarEventos();
     elite.tab();
+
+
 });
 
