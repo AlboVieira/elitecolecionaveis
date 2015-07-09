@@ -624,3 +624,7 @@ ul.level0{
     font-weight: bold;
     font-size: 17px;
 }
+
+.a-left .price{
+    padding-left: 10px;
+}
