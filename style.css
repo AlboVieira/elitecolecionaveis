@@ -615,6 +615,10 @@ ul.level0{
     padding: 4px;
 }
 
+.availability.out-of-stock span{
+    color: #fff !important;
+}
+
 .special-price{
     color: green;
     font-weight: bold;
