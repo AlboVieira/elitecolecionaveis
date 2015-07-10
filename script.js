@@ -112,6 +112,7 @@ var elite = {
             '<li id="menu-telefone" class="ocultar"> (31)3333-3333</li>' +
             '<li id="menu-email"> contato@elitecolecionaveis.com.br</li>' +
             '<a class="redes-face" target="_blank" href="https://www.facebook.com/elitecolecionaveis"></a>' +
+            '<a class="redes-insta" target="_blank" href="https://instagram.com/elitecolecionaveis/"></a>' +
             '<a class="redes-youtube" target="_blank" href="https://www.youtube.com/channel/UCwMICbqIXbmXbVu5SskpIrQ/"></a>';
 
         //coloca menu do header  no topo
