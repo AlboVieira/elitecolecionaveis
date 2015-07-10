@@ -64,7 +64,7 @@ tr th{
     padding: 8px !important;
 }
 
-input[type="text"], textarea{
+input[type="text"],input[type="password"], textarea{
     display: block;
     height: 34px;
     padding: 6px 12px;
