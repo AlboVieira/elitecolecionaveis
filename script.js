@@ -38,15 +38,24 @@ var elite = {
             el.click(function () {
 
                 if(!el.hasClass('down')){
-                    el.children('i').removeClass('glyphicon glyphicon-menu-right');
-                    el.children('i').addClass('glyphicon glyphicon-menu-down');
-                    el.find('ul').slideDown();
-                    el.addClass('down');
+                    if(el.find('ul').length > 0) {
+
+                        el.children('i').removeClass('glyphicon glyphicon-menu-right');
+                        el.children('i').addClass('glyphicon glyphicon-menu-down');
+                        el.find('ul').slideDown();
+                        el.addClass('down');
+                    }
+
+                   // el.css('background-color','#ec971f');
                 }else{
-                    el.children('i').removeClass('glyphicon glyphicon-menu-down');
-                    el.children('i').addClass('glyphicon glyphicon-menu-right');
-                    el.find('ul').slideUp();
-                    el.removeClass('down');
+                    if(el.find('ul').length > 0) {
+                        el.children('i').removeClass('glyphicon glyphicon-menu-down');
+                        el.children('i').addClass('glyphicon glyphicon-menu-right');
+                        el.find('ul').slideUp();
+                        el.removeClass('down');
+
+                    }
+                    //el.css('background-color','#fff');
                 }
             });
         });
@@ -67,6 +76,17 @@ var elite = {
         html += '</ul>';
         $j('.col-left.sidebar').css('box-shadow','0px 0px 3px rgb(140, 109, 52)');
         $j('.col-left.sidebar').append(html);
+
+       /* var itemLista = $j('li.level-top');
+        itemLista.click(function () {
+            if(itemLista.hasClass('aberto')){
+                itemLista.removeClass('aberto');
+            }else{
+                itemLista.addClass('aberto');
+            }
+        })
+        */
+
     },
 
     // carrega o submeno conforme passar do mouse na categoria principal
@@ -136,7 +156,7 @@ var elite = {
         $j('.quick-access .links').css('display', 'block');
     },
 
-    //correções css na tela de carrinho(checkout)
+    //correÃ§Ãµes css na tela de carrinho(checkout)
     carrinho: function () {
         //retira widget vazio organiza grid no carrinho de compras
         if($j('.cart-collaterals .col2-set').length > TEM_REGISTRO){
@@ -156,14 +176,14 @@ var elite = {
         }
     },
 
-    //aplica conf e estilização nas abas da pagina principal
+    //aplica conf e estilizaÃ§Ã£o nas abas da pagina principal
     abasPrincipal: function () {
         //realoca os produtos nas abas
         var todosProdutos = $j('.category-products');
         //remove os itens na pagina principal para colocar nas tabs
         if(todosProdutos.find('.toolbar').length == TEM_REGISTRO) {
 
-            //aplica à aba lançamento
+            //aplica Ã  aba lanÃ§amento
             var novosProdutos = $j('.std').prevAll('.products-grid');
             novosProdutos.remove();
 
@@ -178,7 +198,7 @@ var elite = {
             todosProdutos.remove();
             $j('#tabs-1').html("<div>" +todosProdutos.html() + "</div>");
 
-            //aplica a aba ultimas visualizações os itens
+            //aplica a aba ultimas visualizaÃ§Ãµes os itens
             var ultVisualizacoes = $j('.std').nextAll('.products-grid');
             if(ultVisualizacoes.length > 0){
                 ultVisualizacoes.remove();
@@ -197,7 +217,7 @@ var elite = {
         }
     },
 
-    // centraliza as correções css
+    // centraliza as correÃ§Ãµes css
     correcaoCSS: function () {
         elite.aplicaBotaoPesquisa();
         //adidiciona classe para botao adicionar carrinho
@@ -232,6 +252,12 @@ var elite = {
 
         //acrescenta classe bootstrap para alinhar itens do filro de pesquisa(pagina da categoria)
         $j('.pager').addClass('col-sm-8');
+
+        if($j('.alert-stock.link-stock-alert').length){
+            $j('.alert-stock.link-stock-alert').css('margin-top','20px');
+            $j('.alert-stock.link-stock-alert').text('Avisar quando disponivel');
+            $j('.alert-stock.link-stock-alert').addClass('btn btn-success');
+        }
 
     }
 };
