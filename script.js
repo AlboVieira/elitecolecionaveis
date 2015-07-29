@@ -233,6 +233,18 @@ var elite = {
         //acrescenta classe bootstrap para alinhar itens do filro de pesquisa(pagina da categoria)
         $j('.pager').addClass('col-sm-8');
 
+
+        if($j('.product-options .input-box').length){
+            var htmlTamanho = "<div class='tamP'> " +
+                "<p>P</p>" +
+                "</div>" +
+                "<div class='tamP'>" +
+                "<p>M</p>" +
+                "</div>";
+
+            $j('.product-options .input-box').eq(1).append(htmlTamanho);
+        }
+
     }
 };
 
