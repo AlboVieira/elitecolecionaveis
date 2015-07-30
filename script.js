@@ -243,7 +243,7 @@ var elite = {
 
     botoesTamanho: function () {
         var htmlTamanho =
-            "<div class='container' style='margin-top: 10px'>" +
+            "<div class='container-fluid' style='margin-top: 10px'>" +
 
             "<span style='font-weight: bold'>Masculino</span>"+
             "<div class='row-fluid'>" +
