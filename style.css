@@ -644,3 +644,12 @@ ul.level0{
 .tabltam table td{
     padding: 10px;
 }
+
+.tamanhos{
+    background-color: #ec971f;
+    text-align: center;
+    margin: 5px 5px 0px 0px;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px;
+}

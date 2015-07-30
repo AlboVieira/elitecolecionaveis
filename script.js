@@ -234,17 +234,59 @@ var elite = {
         $j('.pager').addClass('col-sm-8');
 
 
-        if($j('.product-options .input-box').length){
-            var htmlTamanho = "<div class='tamP'> " +
-                "<p>P</p>" +
-                "</div>" +
-                "<div class='tamP'>" +
-                "<p>M</p>" +
-                "</div>";
 
-            $j('.product-options .input-box').eq(1).append(htmlTamanho);
+        if($j('.product-options .input-box').length){
+            elite.botoesTamanho();
         }
 
+    },
+
+    botoesTamanho: function () {
+        var htmlTamanho =
+            "<div class='container' style='margin-top: 10px'>" +
+
+            "<span style='font-weight: bold'>Masculino</span>"+
+            "<div class='row-fluid'>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:63cm / Largura:47cm' class='tamanhos tamMP col-sm-1'> " +
+            "<span>P</span>" +
+            "</div>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:64cm / Largura:51cm' class='tamanhos tamMPP col-sm-1'> " +
+            "<span>PP</span>" +
+            "</div>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:66cm / Largura:52cm' class='tamanhos tamMM col-sm-1'> " +
+            "<span>M</span>" +
+            "</div>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:69cm / Largura:56cm' class='tamanhos tamMG col-sm-1'> " +
+            "<span>G</span>" +
+            "</div>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:69cm / Largura:58cm' class='tamanhos tamMGG col-sm-1'>" +
+            "<span>GG</span>" +
+            "</div>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:71cm / Largura:62cm' class='tamanhos tamMGG col-sm-1'>" +
+            "<span>XG</span>" +
+            "</div>" +
+            "</div><br><br>"+
+
+            "<span style='font-weight: bold'>Feminino</span>"+
+            "<div class='row-fluid'>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:58cm / Largura:45cm' class='tamanhos tamFP col-sm-1'> " +
+            "<span>P</span>" +
+            "</div>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:58cm / Largura:49cm' class='tamanhos tamFM col-sm-1'> " +
+            "<span>M</span>" +
+            "</div>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:61cm / Largura:50cm' class='tamanhos tamFG col-sm-1'> " +
+            "<span>G</span>" +
+            "</div>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:61cm / Largura:52cm' class='tamanhos tamFGG col-sm-1'>" +
+            "<span>GG</span>" +
+            "</div>" +
+            "</div>" +
+
+            "</div>"+
+            "<br><a href='http://elitecolecionaveis.com.br/medidas-camisetas' title='Ver Mais'>Ver Medidas</a>";
+
+        $j('.product-options .input-box').eq(1).append(htmlTamanho);
     }
 };
 
@@ -252,6 +294,7 @@ $j(document).ready(function(){
     elite.aplicarEventos();
     elite.tab();
 
+    $j('[data-toggle="tooltip"]').tooltip();
 
 });
 
