@@ -283,8 +283,8 @@ var elite = {
             "</div>" +
             "</div>" +
 
-            "</div>"+
-            "<br><a href='http://elitecolecionaveis.com.br/medidas-camisetas' title='Ver Mais'>Ver Medidas</a>";
+            "<br><br><br><a href='http://elitecolecionaveis.com.br/medidas-camisetas' title='Ver Mais'>Ver Medidas</a>"+
+            "</div>";
 
         $j('.product-options .input-box').eq(1).append(htmlTamanho);
     }
