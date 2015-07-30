@@ -269,16 +269,16 @@ var elite = {
 
             "<span style='font-weight: bold'>Feminino</span>"+
             "<div class='row-fluid'>" +
-            "<div data-toggle='tooltip' data-placement='top' title='Altura:58cm / Largura:45cm' class='tamanhos tamFP col-sm-1'> " +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:58cm / Largura:45cm / Busto:44cm' class='tamanhos tamFP col-sm-1'> " +
             "<span>P</span>" +
             "</div>" +
-            "<div data-toggle='tooltip' data-placement='top' title='Altura:58cm / Largura:49cm' class='tamanhos tamFM col-sm-1'> " +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:58cm / Largura:49cm / Busto:44cm' class='tamanhos tamFM col-sm-1'> " +
             "<span>M</span>" +
             "</div>" +
-            "<div data-toggle='tooltip' data-placement='top' title='Altura:61cm / Largura:50cm' class='tamanhos tamFG col-sm-1'> " +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:61cm / Largura:50cm / Busto:47cm' class='tamanhos tamFG col-sm-1'> " +
             "<span>G</span>" +
             "</div>" +
-            "<div data-toggle='tooltip' data-placement='top' title='Altura:61cm / Largura:52cm' class='tamanhos tamFGG col-sm-1'>" +
+            "<div data-toggle='tooltip' data-placement='top' title='Altura:61cm / Largura:52cm / Busto:51cm' class='tamanhos tamFGG col-sm-1'>" +
             "<span>GG</span>" +
             "</div>" +
             "</div>" +

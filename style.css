@@ -645,6 +645,10 @@ ul.level0{
     padding: 10px;
 }
 
+.product-options{
+    background-color: #fff !important;
+}
+
 .tamanhos{
     background-color: #ec971f;
     text-align: center;
