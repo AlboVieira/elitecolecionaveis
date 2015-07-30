@@ -139,18 +139,22 @@ li.level-top a{
 }
 
 li.level-top:hover{
-
+    background-color: #ec971f;
+    transition: 0.8s;
 }
 li.level-top a:hover{
     color: #A56401;
 }
-
+li.level-top.down{
+    background-color: #ffffff;
+}
 
 
 li.level-top ul li a{
     display: block;
     font-size: 14px;
     text-decoration: none;
+    padding-left: 10px !important;
 }
 li.level-top ul li{
     color: #000 !important;
@@ -161,6 +165,10 @@ li.level-top ul li{
 
 .col-left.sidebar ul li ul{
     border: none !important;
+}
+.col-left.sidebar ul li ul li a{
+    border: none !important;
+    padding-left: 10px !important;
 }
 
 ul.level-top{
